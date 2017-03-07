@@ -9,7 +9,39 @@
         <meta charset="UTF-8">
         
         <!-- Ajouter un titre à la page -->
-        <title>Bonjour le monde</title>
+        <title>Hello le monde</title>
+        <link type="text/css" rel="stylesheet" href="stylesheet.css">
+
+        <style>
+            table{
+                border-collapse: collapse;
+}
+            td {
+                border: 1px dashed black;
+                border-collapse: collapse;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                text-decoration: line-through;
+                font-family: Arial;
+            }
+            ol {
+                background-color: #0000ee;
+            }
+            ul {
+                background-color: red;
+                list-style-type: none;
+            }
+            form {
+                background-image: url('https://www.w3schools.com/css/img_fjords.jpg');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+            .para {
+                text-align: center;
+                                         }
+
+        </style>
 
     </head>
 
@@ -31,7 +63,7 @@
         <p>Lorem ipsum dolor sit amet, <b>consectetur adipisicing</b> elit. Perferendis consequatur, quidem aspernatur earum. Praesentium quam placeat, repellat labore, maiores totam porro fuga tempore, sunt unde doloribus <i>excepturi reprehenderit</i> architecto recusandae.</p>
 
         <!-- Liste ordonnée -->
-        <ol style="background-color: #0000ee;">
+        <ol>
 
             <li>Pierre</li>
             <li>Paul</li>
@@ -40,7 +72,7 @@
         </ol>
 
         <!-- List non-ordonnée -->
-        <ul style="background-color: red; list-style-type: none;">
+        <ul>
 
             <li>John</li>
             <li>Paul</li>
@@ -49,20 +81,44 @@
         </ul>
 
         <!-- Image -->
-        <img src="img/minion.jpg" alt="Photo d'un minion">
+        <img src="img/minion.jpg" alt="Photo d'un minion"/>
 
         <!-- Formulaire -->
+        
+        <table>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Mike</td>
+                    <td></td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>          
+         </table> 
+         
 
-        <form action="about.html" method="POST" style="background-image: url('https://www.w3schools.com/css/img_fjords.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
+        <form action="about.html" method="POST" >
             <fieldset>                
                 <legend>Mike:</legend>
-                <p style="text-align: center;">Nom:<br>
+                <p class="para">Nom:<br>
                 <input type="text" name="nom"></p>
-                <p style="text-align: center;">Prenom:<br>
+                <p class="para">Prenom:<br>
                 <input type="text" name="prenom"></p><br>
-                <p style="text-align: center;"><input type="submit" name="submit" value="Envoi"></p>
+                <p class="para"><input type="submit" name="submit" value="Envoi"></p>
             </fieldset>
-        </form>         
+        </form>
+
+       
                     
     </body>
 </html>
