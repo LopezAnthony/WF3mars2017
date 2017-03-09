@@ -6,7 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Mon Premier Site</title>
-        <link rel="stylesheet" href="css/style.css">
+
+        <!-- Toujours Ajouter les CSS externes en  premier -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+        <!-- Ajouter le CSS de la page en dernier -->
+        <link rel="stylesheet" href="css/style.css">        
     </head>
 
     <body>
@@ -18,9 +23,9 @@
             <nav>                
                 <ul>
                     <li><a href="#">welcome home</a></li>
-                    <li><a href="#">portfolio</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">contact</a></li>      
+                    <li><a href="#portfolio">portfolio</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#contact">contact</a></li>      
                 </ul>  
                                            
             </nav>
@@ -65,7 +70,7 @@
             <section id="about">
                 <h2>About</h2>
                 <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization. Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
-                <a href="#">Download Theme</a>            
+                <a href="#"><i class="fa fa-download" aria-hidden="true"></i> Download Theme</a>            
             </section>
 
             <section id="contact">
@@ -109,7 +114,13 @@
                 <article>
 
                     <h3>Around the web</h3>
-                    <p>Pictos</p>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-empire" aria-hidden="true"></i></a></li>                       
+                    </ul>
 
                 </article>
 
