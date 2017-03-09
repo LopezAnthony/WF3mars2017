@@ -129,6 +129,10 @@ Mise en forme typographique
         display: inline-block;
         
     }
+
+    #portfolio article:hover{
+        background-color: yellow;        
+    }
         
    
 
