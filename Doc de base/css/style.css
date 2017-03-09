@@ -1,0 +1,33 @@
+/*
+style reset
+*/
+
+    /* Supprimer toutes les marges */
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Faire en sorte que 1rem soit égal à 10px */
+    html{
+        font-size: 62.5%;
+    }
+    
+    body{
+        font-size: 1.5rem; /* => 15px */
+    }
+
+    /* Supprimer la décoration des balises A */
+
+    a{
+        text-decoration: none;        
+    }
+
+    /* Faire en sorte que les images ne dépassent pas leur parent */
+    img{
+        max-width: 100%;
+    }
+
+    
+
+    
