@@ -97,6 +97,13 @@ Style header
 
         /* Ajouter une marge extérieure basse de 60px*/
         margin-bottom: 6rem;
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+
     }
 
     nav a{
@@ -104,7 +111,11 @@ Style header
 
         /* Passer le texte en gras */
         font-weight: bold;
-    }    
+    }   
+
+    nav a:hover{
+        color: #18BC9C;
+    } 
      
      li{
         /* Aligner les balises LI */
@@ -230,11 +241,6 @@ style about
         font-weight: bold;
         padding: 1rem 1.5rem;     
         border: 0.2rem solid white;
-
-        /* Créer un bord arrondi */
-        -webkit-border-radius: 0.6rem;
-        -moz-border-radius: 0.6rem;
-        border-radius: 0.6rem;
             
         -webkit-transition: all 0.6s;
         -moz-transition: all 0.6s;
