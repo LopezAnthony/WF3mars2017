@@ -1,4 +1,9 @@
 /*
+Importer un fichier CSS
+*/
+    @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+/*
 style reset
 */
 
@@ -84,8 +89,8 @@ Style header
         /* Ajouter la couleur de fond */
         background:#2C3E50;
 
-        /* Aligner le texte à gauche */
-        text-align: left;
+        /* Aligner le texte à droite */
+        text-align: right;
 
         /* Ajouter une marge intérieure de 30px */
         padding: 3rem;
@@ -99,7 +104,7 @@ Style header
 
         /* Passer le texte en gras */
         font-weight: bold;
-    }
+    }    
      
      li{
         /* Aligner les balises LI */
@@ -107,6 +112,22 @@ Style header
 
         /* Ajouter une marge extérieure à droite */
         margin-right: 1rem;
+    }
+
+    nav ul {
+        /* Bloquer les enfants dans leurs parents */
+        position: relative;
+    }
+
+    #home{
+
+        /* Sortir la balise du flux pour la repositionner précisemment */
+        position: absolute;
+        /* Placer la balise à gauche */
+        left: 0;
+
+        /* Modifier la taille de la font */
+        font-size: 1.5em;
     }
 
     h1{
@@ -129,6 +150,8 @@ Style header
         padding: 6rem 0;
     }
 
+    
+
 /*
 style portfolio
 */
@@ -138,17 +161,47 @@ style portfolio
     #portfolio{
         text-align: center;        
     }
-    #portfolio a{
-        /* Masquer les balises */
-        display:none;
-    }
 
     #portfolio article{
         /* Créer 3 colonnes */
         display: inline-block;
         width: 29%;
-        margin: 1rem;        
+        margin: 1rem;  
+
+         /* Bloquer les enfants dans leur parent */
+        position: relative;     
     }
+
+        #portfolio a{
+            font-size: 8rem;
+            background: rgba(24, 188, 156, 0.7);
+            color: white;
+
+            /* Sortir la balise duflux pour la positionner précisément */
+            position: absolute;
+
+            /* Placer la balise en haut à gauche */
+            top: 0;
+            left: 0;
+            
+            /* Faire en sorte que la balise soit à 100% de la taille de son parent */
+            width: 100%;
+            height: 100%;
+            
+            /* Réduire l'opacité de la balise */
+            opacity: 0;
+            
+            /* Gérer une transition entre les états de la balise */
+            -webkit-transition: all 0.8s;
+            -moz-transition: all 0.8s;
+            transition: all 0.8s;
+       }
+
+        #portfolio a:hover{
+
+            /* Modifier l'opacoté de la balise en hover */
+            opacity: 1;
+        }
 /*
 style about
 */
@@ -182,15 +235,16 @@ style about
         -webkit-border-radius: 0.6rem;
         -moz-border-radius: 0.6rem;
         border-radius: 0.6rem;
+            
+        -webkit-transition: all 0.6s;
+        -moz-transition: all 0.6s;
+        transition: all 0.6s;    
         
     }
 
     #about a:hover{
         background-color: white;
-        color:#18BC9C;    
-        -webkit-transition: 0.6s;
-        -moz-transition: 0.6s;
-        transition: 0.6s;    
+        color:#18BC9C;
     }
 /*
 style contact
@@ -266,14 +320,15 @@ style footer
         width: 3rem;
         height: 3rem;
         border-radius: 100%;
+        
+        -webkit-transition: all 0.6s;
+        -moz-transition: all 0.6s;
+        transition: all 0.6s
     }
 
     article li a:hover{
         background: white;
-        color: #18bc9c;
-        -webkit-transition: 0.6s;
-        -moz-transition: 0.6s;
-        transition: 0.6s;
+        color: #18bc9c;;
     }
 
 
