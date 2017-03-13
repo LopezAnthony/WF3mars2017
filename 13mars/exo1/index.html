@@ -1,0 +1,84 @@
+<!--
+    -Créer un document de base html5
+    -Créer une ouverture de page
+        -un titre principal
+        -une navigation principal avec 4 liens
+            -Home
+            -About
+            -Contacts
+            -Facebook
+    -Créer une zone de contenu principal 
+        -une section
+            -Sous-titre "About"
+            -1 image
+            -1 paragraphe
+        -une section
+            - sous-titre "Contacts"
+            - Formulaire : nom/email/message
+    -Créer une fermeture de page
+    - Uner MIT license
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>13 Mars Révision</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+
+        <header>
+
+            <h1>Hello World</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contacts</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </nav>            
+
+        </header>
+
+        <main>
+
+            <section>
+                <h2>About</h2>
+                <img src="img/necronomicon.jpg" alt="necronomicon">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint error possimus similique, magnam reprehenderit vero, impedit officiis quisquam eos minima libero voluptatum velit recusandae. Eaque commodi ex molestias veniam magnam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque voluptatibus doloremque iste eum odio hic perferendis cumque esse laborum harum, quod, laboriosam consequuntur officiis quisquam dolorum ea veniam aspernatur aut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod dolorem aspernatur libero est earum recusandae vel dolorum praesentium voluptatibus aut magni porro fuga repellat nesciunt corrupti, excepturi laudantium, distinctio placeat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, distinctio, iste culpa corporis odio voluptatem, architecto veritatis consequatur repellat sunt esse, necessitatibus minus ipsum assumenda iure aliquam. Saepe, tempore, repudiandae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque magni nam illum accusantium tempore id maiores, nostrum facilis omnis, accusamus rerum alias nihil architecto veniam suscipit porro quam. Repellat, nam?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus officia adipisci esse commodi, omnis explicabo rem in facilis aspernatur alias earum, maiores officiis laudantium quas quam, dolorum magni iusto cum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae excepturi totam debitis ipsam voluptatum maxime. Assumenda ipsam rerum, ducimus dolores maiores iste consequatur velit doloribus aperiam fugit eaque fugiat! Architecto!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis optio odit dolores odio maiores, sunt sit amet aut quo, corporis ea voluptate repellat quidem iusto. Tenetur laudantium accusantium sunt, ullam.</p>
+            </section>
+
+            <section>
+                <h2>Contacts</h2>
+                <form action="#">
+                    <!-- Pour associer un label à un input il faut utiliser l'id de l'input dans l'attribut for du label -->
+                    <label for="userName">Name :</label>
+                    <input type="text" id="userName" placeholder="Min. 5 caractères">
+                    <label for="email">userMail :</label>
+                    <input type="email" id="userMail" placeholder="Adresse mail valide">
+                    <label for="userMessage">Message :</label>
+                    <textarea type="message" id="userMessage" placeholder="Min. 5 caractères"></textarea>
+                    <input type="submit" value="Envoyer votre message">
+                </form>
+            </section>
+
+        </main>
+
+        <footer>
+
+            Under MIT license
+
+        </footer>
+
+
+        
+    </body>
+    
+</html>

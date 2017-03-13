@@ -1,0 +1,101 @@
+
+
+
+/*
+Reset
+*/
+
+    /* Supprimer toutes les marges de toutes les balises */
+  
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Faire en sorte que 1rem soit égal à 10px */
+    html{
+        /* Ne JAMAIS définir les propriétés width et height sur le html */
+        font-size: 62.5%;
+    }
+
+    body{
+
+        /* Ne JAMAIS définir les propriétés width et height sur le body */
+        font-size: 1.5rem; /* => 15px */
+        text-align: center;
+    }
+
+        /* Ne JAMAIS définir les propriétés width et height sur le body */
+    header, main, footer{
+        max-width: 50rem;
+        padding: 2rem;
+        margin: 2rem auto;
+    }
+
+    /* Supprimer la décoration des balises A */
+
+    a{
+        text-decoration: none;        
+    }
+
+    /* Faire en sorte que les images ne dépassent pas leur parent */
+    img{
+        max-width: 100%;
+    }
+
+/* 
+Style header
+*/
+
+    header{
+        background: lightgrey;        
+        max-width: 50rem;
+        
+        position: relative;
+    }
+
+    /* Aligner les balises li de la nav */
+    li{
+        display: inline-block;
+    }
+
+    header li:first-child{
+        position: absolute;
+        right: 2rem;
+    }
+
+    header li:last-child{
+        position: absolute;
+        left: 02rem;
+    }
+
+/*
+Style main
+*/
+
+    /*Exclure de la sélection les input de type submit */
+
+
+    label, input:not([type="submit"]), textarea{
+        display: block;
+        width: 100%
+    }
+
+/* 
+Style Footer
+*/
+
+    /* Faire en sorte que le footer soit toujours collé en bas de la page */
+    footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        background: lightgrey;
+
+    }
+
+    
+
+    
