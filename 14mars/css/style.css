@@ -17,6 +17,7 @@ Reset
         font-size: 1.5rem;
         font-family: 'Roboto', sans-serif;
         font-weight: 400;
+        text-align: center;
     }
 
     a{
@@ -24,7 +25,7 @@ Reset
         color: #349aa6;
     }
 
-    h1 span{
+    span{
         text-transform: lowercase;
     }
 
@@ -42,13 +43,32 @@ Reset
         display: block;
     }
 
+    h2, h3{
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 2.2rem;
+    }
+
+    section{
+        padding:4rem 2rem; 
+
+    }
+
+    p{
+        padding: 4rem 0;
+    }
+
     
 /*
 Header
 */
 
+
+
+
+
+
     header{
-        text-align: center;
         color: white;
 
         /* Configurer l'image de fond en parallaxe */
@@ -96,4 +116,84 @@ Header
         padding-top: .8rem;        
     }
 
+    figure{
+        padding: 2rem 0;
+    }
 
+/*
+Main
+*/
+
+    /* Programme / réponse */
+    section:nth-child(2), section:nth-child(4){
+        background-image: url(../img/img-foule.jpg);
+        background-attachment: fixed;
+        background-position: center;
+
+        color: white;
+    }
+
+    .callToAction{
+        color: white;
+        display: inline-block;
+        border: .1rem solid white;
+        padding: 2rem;
+        border-radius: .5rem;
+        margin-top: 2rem;
+    }
+
+    .callToAction.blue{
+        color: #349aa6;
+        border-color:#349aa6;
+    }
+
+    /* Solutions */
+    section:nth-child(3){
+        background: #349aa6;
+        color: white;
+    }
+
+    /* Inscrivez-vous */
+
+    [alt="logo salon des maires"]{
+        width: 10rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Vidéo */
+    section:nth-child(6){
+        background-color: #349aa6;
+        position: relative;
+    }
+
+    video{
+        /* Placer ma vidéo en fond d'écran */
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
+
+    section:nth-child(6) article{
+        color: white;
+        background: rgba(0, 0, 0, .7);
+        padding: 4rem 2rem;
+
+        /* Faire passer la balise sur la première couche */
+        position: relative;
+        z-index: 1;
+    }
+
+    section:nth-child(6) h3{
+        font-weight: 900;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    section:nth-child(6) a{
+        color: white;
+    }
+
+    /* Chiffres */
+
+    
