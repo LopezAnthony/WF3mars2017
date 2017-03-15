@@ -6,6 +6,8 @@ style reset
     *{
         padding: 0;
         margin: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box; 
     }
 
     /* Faire en sorte que 1rem soit égal à 10px */
