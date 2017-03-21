@@ -1,0 +1,72 @@
+/*
+@import
+*/
+    @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+    @import url('https://fonts.googleapis.com/css?family=Special+Elite|Roboto:400,700');
+
+/*
+reset
+*/
+
+    *{
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html{
+        font-size: 62.5%;
+        
+    }
+
+    body{
+        font-size: 1.5rem;
+        font-weight: 400;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+    }
+
+    h1{
+        font-family: 'Special Elite', cursive;
+        font-weight: 400;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+/*
+header
+*/
+
+    header{
+        color: white;
+        background: #22175b;
+        padding: 2rem;
+        position: relative;
+    }
+
+    nav{
+        display: none;
+    }
+
+    h1 span{
+        display: block;
+        font-family: 'Roboto', sans-serif;
+        font-size: .5em;
+    }
+
+    header>a {
+        display: inline-block;
+        color: #22175b;
+        padding-top: 0.5rem;
+        width: 3rem;
+        height: 3rem;
+        background: white;
+        -webkit-border: .1rem solid #22175b;
+        border: .1rem solid #22175b;
+        border-radius: 50%;
+    }
+
+    
