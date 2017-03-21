@@ -28,8 +28,15 @@ reset
     }
 
     h1{
+        font-size: 4rem;
         font-family: 'Special Elite', cursive;
         font-weight: 400;
+    }
+
+    h2{
+        font-weight: 400;
+        font-family: 'Special Elite', cursive;
+        margin-bottom: 1rem;
     }
 
     a, header li{
@@ -41,6 +48,10 @@ reset
 
     ul{
         list-style: none;
+    }
+
+    img{
+        max-width: 100%;
     }
 
 
@@ -56,7 +67,7 @@ header
     }
 
     nav{
-        /*display: none;*/
+        display: none;
     }
 
     nav li{
@@ -120,6 +131,78 @@ header
         border-color: white;
     }
 
+/* 
+main
+*/
+    main{
+        padding: 4rem 2rem;
+    }
+
+    figure{
+        position: relative;
+    }
+
+    figure::after{
+        content: "";
+        width: 100%;
+        height: 3rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: white;
+    }
+
+    figcaption{
+        font-weight: 700;
+        display: inline-block;
+        background: white;
+        padding: 1rem;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 70%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    figcaption span{
+        font-weight: 400;
+        display: block;
+    }
+
+    .portfolioPage article{
+        position: relative;
+        margin: 2rem auto;
+        /* Masquer les éléments qui dépassent de la balise */
+        overflow: hidden;
+    }
+
+    .portfolioPage main a{
+        color: white;
+        background: #22175b;
+        padding: .5rem 1rem;
+
+        position: absolute;
+        top: -10%;
+        left: 50%;
+        z-index: 1;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    /* Changer la propriété top de la balise A au survol de l'article */
+     .portfolioPage article:hover a{
+         top: 40%;
+     }
+
+     section{
+         margin-bottom: 5rem;
+     }
+
+
+
+
 /*
 footer
 */
@@ -132,6 +215,7 @@ footer
         bottom: 0;
         left: 0;
         width: 100%;
+        z-index: 2;
     }
 
     footer li:not(:last-child){
