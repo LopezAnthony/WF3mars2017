@@ -135,7 +135,7 @@ header
 main
 */
     main{
-        padding: 4rem 2rem;
+        padding: 4rem 2rem 10rem 2rem;
     }
 
     figure{
@@ -200,6 +200,35 @@ main
          margin-bottom: 5rem;
      }
 
+     form{
+         margin: 2rem auto;
+     }
+
+     input:not([type="submit"]), textarea{
+         display: block;
+         width: 100%;
+         border: none;
+         border-bottom: .1rem dotted #22175b;
+         padding: 1rem;
+         margin-bottom: 2rem;
+     }
+     
+     textarea{
+         min-height: 15rem;
+     }
+
+     form :last-child{
+         background: #22175b;
+         color: white;
+         border: none;
+         padding: 1rem;
+     }
+
+     iframe{
+         border: none;
+         width: 100%;
+         min-height: 30rem;
+     }
 
 
 
@@ -226,3 +255,65 @@ footer
     footer a{
         color: white;
     }
+
+
+/*
+Requêtes media
+*/
+
+    /* Ecran d'une taille minimal de 400px */
+    @media screen and (min-width:400px){
+        .portfolioPage article{
+            display: inline-block;
+            width:49%;
+
+
+            /* Gérer les paddings */
+            padding:  0 1rem 0 0;
+            
+        }
+
+        .portfolioPage aricle( 2n + 2){
+            padding: 0 0 0 1rem;
+        }
+    }
+
+    @media screen and (min-width: 750px) {
+        
+        /*style reset */
+        main, h1, nav{
+            max-width: 85rem;
+            margin: auto;
+        }
+
+        /* style header */
+        header{
+            text-align: left;
+            text-indent: 5rem;
+        }
+
+        h1{
+            font-size: 4rem;
+        }
+
+        h1 span{
+            display: initial;
+        }
+
+        header>a{
+            display: none;
+        }      
+        nav{
+            display: block;
+        }  
+        nav li{
+            display: inline-block;
+            text-indent: 0;
+        }
+
+        /* style main */
+        main{
+            padding: 4rem 0 10rem 0;
+        }
+    }
+
