@@ -16,5 +16,33 @@ console.log(myNumber);
 var myAdd = 7 + 5;
 console.log(myAdd);
 
+var myConc = 'Salut ' +'mon ' + 'pote';
+console.log(myConc);
+
 //  Opérateur de soustraction : -
-var mySous
+var mySous = 7 - 5;
+console.log(mySous);
+
+//  Opérateur de multiplication
+var myMult = 7 * 5;
+console.log(myMult);
+
+//  Opérateur de division 
+var myDivi = 14 / 3;
+console.log(myDivi);
+
+//  Opérateur modulo : %
+var myModulu = 12 % 5;
+console.log(myModulu);
+
+//  Opérateur d'addition et d'affectation : +=
+var a = 10;
+var b = 5;
+
+//  a = a + b;
+a += b;
+console.log(a);
+
+//  Opérateur de soustraction et d'affectation : -=
+b -= a;
+console.log(b);
