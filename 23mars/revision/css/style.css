@@ -1,0 +1,141 @@
+/*
+reset
+*/
+
+    *{
+        padding:0;
+        margin: 0; 
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    html{
+        font-size: 62.5%;
+    }
+    body{
+        font-size: 1.5rem;
+    }
+    img{
+        max-width: 100%;
+    }
+    a{
+        text-decoration: none;
+    }
+
+/* style header
+Ajouter une marge intérieure de 20px
+La nave ne dépasse pas les 850px
+Liens de la nav sont centrés sauf le premier qui est à gauche et le dernier qui est a droite
+*/
+
+    header{
+        padding: 2rem;
+        background: yellow;
+        border: .2rem solid red;
+    }
+
+    nav{
+        max-width: 85rem;
+        margin: auto;
+        border: .1rem dashed black;
+        
+        position: relative;                
+        text-align: center;
+    }
+
+    li{
+        display: inline-block;
+    }
+
+    li:first-of-type{
+        position: absolute;
+        left: 0;
+    }
+
+    li:last-of-type{
+        position: absolute;
+        right: 0;
+    }
+
+/*
+style main 
+- le main ne dépasse pas 850px
+- les différents zones ont une marge en bas de 40px
+
+*/
+
+    main{
+        max-width: 85rem;
+        margin: 0 auto 4rem auto;
+    }
+
+    section:not(:last-child){
+        margin-bottom: 4rem;
+    }
+
+
+    /*
+    style portfolio
+    - sur deux colonnes
+    -figcaption sont caler au-dessus de l'image fond de couleur blanc 50% d'opacité
+    */
+
+
+    figure{
+        display: inline-block;
+        position: relative;
+        width: 49%;
+    }
+
+    figcaption{
+        background-color:rgba(255, 255, 255, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;        
+    }
+
+/*
+style formulaire
+-textarea et le input (sauf le submit) font toute la largeur du formulaire
+-le type submit à une couleur de fond et une couleur de police
+*/
+
+    form{
+        width: 50%;
+        text-align: right;
+    }
+    input:not(:last-of-type), textarea{
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        /*border: none;*/
+    }
+
+    [type="submit"]{
+        background:darkred;
+        color: yellow;
+        border: none;
+        padding: 1rem;
+        -webkit-border-radius: .5rem;
+        border-radius: .5rem;
+    }
+
+/*
+methode desktop down
+*/
+
+    @media screen and (max-width: 450px){
+
+        figure{
+            width: 100%;
+        }
+
+        form{
+            width: 100%;
+        }
+
+    }
+
+
+
+
