@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Roboto:400,700');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+/* 
+reset
+*/
+    *{
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: .5s;
+        transition: .5s;
+    }
+    html{
+        font-size: 62.5%;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+    }
+    body{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    h1, h2, h3{
+        font-family: 'Pacifico', cursive; 
+        font-weight: 400;
+    }
+    img{
+        max-width: 100%;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+    }
+
+    
+
+/*
+Header
+*/
+
+    nav ul{
+        height: 0;
+        overflow: hidden;
+        -webkit-transition: .8s;
+        transition: .8s;
+    }
+    li{
+        background: rgba(255, 255, 255, .5);
+        list-style: none;
+        padding: 1rem;
+        margin-bottom: .5rem;
+        
+    }
+
+    .toggleBurger{
+        height: 13rem;
+    }
+
+    .active{
+        background: white;
+    }
+    .active a{
+        color: red;
+    }
+
+    header{
+        position: relative;
+    }
+
+    header i{
+        position: absolute;
+        display: inline-block;
+        bottom: 0;
+        left: 50%;
+        width: 3rem;
+        height: 3rem;
+        background: red;
+        border: .2rem solid white;
+        color: white;
+        padding-top: 0.5rem;
+
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-transform: translate(-50%, 115%);
+        transform: translate(-50%, 115%);
+        cursor: pointer;
+    }
+
+    header, footer{
+        background: red;
+        color: white;
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    h1 span{
+        display: block;
+        font-weight: 700;
+        font-size: .5em;
+        font-family: 'Roboto', sans-serif; 
+    }
+
+/*
+Main
+*/
+    h2{
+        color: red;
+    }
+    h2::after{
+        content: '';
+        display: block;
+        border-bottom: .2rem dotted black;
+        width: 5rem;
+        height: 0.5rem;
+        margin:1rem auto 2rem auto;
+    }
+
+    h3{
+        margin-bottom: 1rem;
+    }
+
+    main, h1, nav{
+            position: relative;
+            max-width: 85rem;
+            margin: auto;
+    }
+
+/*
+Footer
+*/
+
+    footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+/*
+Media
+*/
+
+    @media screen and (min-width: 850px){
+        
+        /* Style header */
+        header{
+            text-align: left;
+            position: relative;
+        }
+
+        .fa-bars{
+            display: none;
+        }
+
+        nav ul{
+            height: auto;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        nav li{
+            display: inline-block;
+        }
+        nav li:not(:last-child){
+            margin-right: .5rem;
+        }  
+
+    }

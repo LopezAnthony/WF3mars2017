@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>exo3 : Validation du formulaire en jQuery</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <header>
+            <h1>exo3 : Validation du formulaire en jQuery</h1>
+        </header>
+        
+        <main>
+            
+            <section>
+
+                <h2>Mon super projet</h2>
+
+                <img src="http://lorempixel.com/800/400/cats/" alt="image de chat">
+
+                <h3>Ajouter un commentaire</h3>
+
+                <form action="addComment.php">
+                    
+                    <article>
+                        <label for="userName">Votre nom : <b></b></label>
+                        <input type="text" name="userName" id="userName">
+                    </article>
+
+                    <article>
+                        <label for="userMessage">Votre message : <b></b></label>
+                        <textarea name="userMessage" id="userMessage"></textarea>
+                    </article>
+
+                    <input type="submit" value="Commentez">
+
+                </form>
+
+            </section>
+
+            <section>
+
+                <h3>Liste des commentaires</h3>
+
+            </section>
+
+        </main>
+        
+        <footer>
+            Under MIT Licence
+        </footer>
+        
+        
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
