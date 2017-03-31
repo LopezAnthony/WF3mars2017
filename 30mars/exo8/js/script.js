@@ -7,8 +7,8 @@ $(document).ready(function(){
     deathSelector
     */
 
-    var deathSelector = $('h3').prev().parent().parent().next().parent().find('main').children('article').find('h3');
-    console.log('Balise sélectionnée :', deathSelector);
+        var deathSelector = $('h3').prev().parent().parent().next().parent().find('main').children('article').find('h3');
+        console.log('Balise sélectionnée :', deathSelector);
 
     /*
     Les Sélecteurs jQuery "classiques"
