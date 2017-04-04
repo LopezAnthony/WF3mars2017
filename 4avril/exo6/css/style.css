@@ -1,0 +1,328 @@
+/*
+@import
+*/
+    @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+    @import url('https://fonts.googleapis.com/css?family=Special+Elite|Roboto:400,700');
+
+/*
+reset
+*/
+
+    *{
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html{
+        font-size: 62.5%;
+        
+    }
+
+    body{
+        font-size: 1.5rem;
+        font-weight: 400;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+    }
+
+    h1{
+        font-size: 4rem;
+        font-family: 'Special Elite', cursive;
+        font-weight: 400;
+    }
+
+    h2{
+        font-weight: 400;
+        font-family: 'Special Elite', cursive;
+        margin-bottom: 1rem;
+    }
+
+    a, header li{
+        text-decoration: none;
+
+        -webkit-transition: all .5s;
+        transition: all .5s; 
+    }
+
+    ul{
+        list-style: none;
+    }
+
+    img{
+        max-width: 100%;
+    }
+
+
+/*
+header
+*/
+
+    header{
+        color: white;
+        background: #22175b;
+        padding: 2rem 2rem 4rem 2rem;
+        position: relative;
+    }
+
+    nav{
+        display: none;
+    }
+
+    nav li{
+        display: block;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+        font-weight: 700;
+    }
+
+    nav a{
+        color: white;
+    }
+
+    
+
+    nav li:hover{
+        background: rgba(255, 255, 255, 1);
+    }
+
+    nav li:hover a{
+        color: #22175b;
+    }
+
+
+
+    h1 span{
+        display: block;
+        font-family: 'Roboto', sans-serif;
+        font-size: .5em;
+    }
+
+    header>a {
+        font-size: 1.5rem;
+        display: inline-block;
+        color: #22175b;
+        padding-top: 0.9rem;
+        width: 4rem;
+        height: 4rem;
+        background: white;
+        -webkit-border: .1rem solid #22175b;
+        border: 0.2rem solid #22175b;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    header>a:hover{
+        background: #22175b;
+        color: white;
+        border-color: white;
+    }
+
+
+    /*
+    nav aboutPage
+    */
+        .aboutPage nav{
+            position: fixed;
+            top: 0;
+            left: -100%;
+            height: 100%;
+            width: 20rem;
+            padding: 2rem;
+            background: #000000;
+            z-index: 1000;
+            display: block;
+        }
+
+/* 
+main
+*/
+    main{
+        padding: 4rem 2rem 10rem 2rem;
+    }
+
+    figure{
+        position: relative;
+    }
+
+    figure::after{
+        content: "";
+        width: 100%;
+        height: 3rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: white;
+    }
+
+    figcaption{
+        font-weight: 700;
+        display: inline-block;
+        background: white;
+        padding: 1rem;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 70%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    figcaption span{
+        font-weight: 400;
+        display: block;
+    }
+
+    .portfolioPage article{
+        position: relative;
+        margin: 2rem auto;
+        /* Masquer les éléments qui dépassent de la balise */
+        overflow: hidden;
+    }
+
+    .portfolioPage main a{
+        color: white;
+        background: #22175b;
+        padding: .5rem 1rem;
+
+        position: absolute;
+        top: -10%;
+        left: 50%;
+        z-index: 1;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    /* Changer la propriété top de la balise A au survol de l'article */
+     .portfolioPage article:hover a{
+         top: 40%;
+     }
+
+     section{
+         margin-bottom: 5rem;
+     }
+
+     form{
+         margin: 2rem auto;
+     }
+
+     input:not([type="submit"]), textarea{
+         display: block;
+         width: 100%;
+         border: none;
+         border-bottom: .1rem dotted #22175b;
+         padding: 1rem;
+         margin-bottom: 2rem;
+     }
+     
+     textarea{
+         min-height: 15rem;
+     }
+
+     form :last-child{
+         background: #22175b;
+         color: white;
+         border: none;
+         padding: 1rem;
+     }
+
+     iframe{
+         border: none;
+         width: 100%;
+         min-height: 30rem;
+     }
+
+
+
+/*
+footer
+*/
+
+    footer{
+        background: #22175b;
+        color: white;
+        padding: 1rem 2rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+    }
+
+    footer li:not(:last-child){
+        display: inline-block;
+        margin: 1rem 2rem;
+    }
+    
+    footer a{
+        color: white;
+    }
+
+
+/*
+Requêtes media
+*/
+
+    /* Ecran d'une taille minimal de 400px */
+    @media screen and (min-width:400px){
+        .portfolioPage article{
+            display: inline-block;
+            width:49%;
+
+
+            /* Gérer les paddings */
+            padding:  0 1rem 0 0;
+            
+        }
+
+        .portfolioPage aricle( 2n + 2){
+            padding: 0 0 0 1rem;
+        }
+    }
+
+    @media screen and (min-width: 750px) {
+        
+        /*style reset */
+        main, h1, nav{
+            max-width: 85rem;
+            margin: auto;
+        }
+
+        /* style header */
+        header{
+            text-align: left;
+            text-indent: 5rem;
+        }
+
+        h1{
+            font-size: 4rem;
+        }
+
+        h1 span{
+            display: initial;
+        }
+
+        header>a{
+            display: none;
+        }      
+        nav{
+            display: block;
+        }  
+        nav li{
+            display: inline-block;
+            text-indent: 0;
+        }
+
+        /* style main */
+        main{
+            padding: 4rem 0 10rem 0;
+        }
+    }
+
