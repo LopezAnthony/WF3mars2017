@@ -43,6 +43,13 @@ $(document).ready(function () {
         $('select').focus(function(){
             $(this).prev().addClass('hideError');
         });
+        
+        $('[type="checkbox"]').focus(function(){
+
+            if($(this)[0].checked == false){
+                $('form p').addClass('hideError');
+            }
+        });
 
             // Capter le blur sur les inputs et le textarea
         $('input, textarea').blur(function(){
@@ -54,7 +61,12 @@ $(document).ready(function () {
             };
         });
 
-        
+        // Refermer la modal
+        $('.fa').click(function(){
+
+            $('#modal').fadeOut();
+
+        });
 
         // Capter la soumission du formulaire
         $('form').submit(function(evt){
@@ -115,12 +127,23 @@ $(document).ready(function () {
 
                 // Envoi des données dans le fichier de traitement PHP
                 // PHP répond true => continuer le traitement du formulaire
+                    
+                    // Ajouter la valeur de userName dans la balise h2 span de la modale
+                    $('#modal span').text( userName.val() );
+
+                    // Afficher la modal
+                    $('#modal').fadeIn();
+
 
                     // Vider les champs
                     $('form')[0].reset();
 
+                    // Supprimer les messages d'erreur
+                    $('form b').text('');
+
                     // Replacer les labels 
                     $('label').removeClass();
+
             };
         });
 
