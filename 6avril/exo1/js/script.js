@@ -36,8 +36,12 @@ $(document).ready(function () {
         console.log('je suis sur la page Contacts')
 
         // Capter le focus sur les inputs et le textarea
-        $('input, textarea').focus(function(){
-            $(this).prev().addClass('openedLabel');
+        $('input:not([type="submit"]), textarea').focus(function(){
+            $(this).prev().addClass('openedLabel hideError');
+        });
+
+        $('select').focus(function(){
+            $(this).prev().addClass('hideError');
         });
 
             // Capter le blur sur les inputs et le textarea
@@ -50,6 +54,75 @@ $(document).ready(function () {
             };
         });
 
+        
+
+        // Capter la soumission du formulaire
+        $('form').submit(function(evt){
+            evt.preventDefault();
+
+            // Définir les variables globales du formulaire
+            var userName = $('#userName');
+            var userEmail = $('#userEmail');
+            var userSubject = $('#userSubject');
+            var userMessage = $('#userMessage');
+            var checkbox = $('[type="checkbox"]');
+            var formScore = 0;
+
+            // Vérifier que userName à au minimum 2 caractères
+            if( userName.val().length < 2){
+                userName.prev().children('b').text('Min. 2 Caractères')
+            }else{
+                console.log('userName ok ')
+                formScore++
+            };
+
+            // Vérifier que userEmail à au minimum 5 caractères
+            if( userEmail.val().length < 5){
+                userEmail.prev().children('b').text('Min. 5 Caractères')
+            }else{
+                console.log('email Ok')
+                formScore++
+            };
+
+            // Vérifier que userSubject à une option de selectionné
+            if( userSubject.val() == 'null' ){
+                userSubject.prev().children('b').text('Veuillez sélectionner un sujet')
+            }else{
+                console.log('subject ok')
+                formScore++
+            };
+
+            // Vérifier que userMessage à au moins 5 caractères
+            if( userMessage.val().length < 5){
+                userMessage.prev().children('b').text('Min. 5 Caractères')
+            }else{
+                console.log('email Ok')
+                formScore++
+            };
+
+            // Vérifier que la checkbox est cochée
+            if( checkbox[0].checked == false){
+                console.log('cg required')
+                $('form p b').text('vous devez accepter les conditions générales')
+            }else{
+                console.log('cg OK')
+                formScore++
+            };
+
+            // Validation finale du formulaire
+            if(formScore == 5){
+                console.log('form ok ')
+
+                // Envoi des données dans le fichier de traitement PHP
+                // PHP répond true => continuer le traitement du formulaire
+
+                    // Vider les champs
+                    $('form')[0].reset();
+
+                    // Replacer les labels 
+                    $('label').removeClass();
+            };
+        });
 
     };
 
@@ -92,6 +165,8 @@ $(document).ready(function () {
 
                         // Vérifier si l'utilisateur veux voir la page contacts.html
                         if(viewToLoad == 'contacts.html'){
+
+                            // Fonction gestion formulairee
                             contactFrom();
                         };
 
