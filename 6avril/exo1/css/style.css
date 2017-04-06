@@ -251,6 +251,65 @@ main
          cursor: pointer;
      }
 
+     form{
+         text-align: left;
+         margin: 2rem auto;
+     }
+
+     select{
+         margin: 1rem auto 3rem auto;
+     }
+     textarea{
+         min-height: 20rem;
+     }
+
+     [type="checkbox"]{
+         display: inline-block;
+         width: auto;
+     }
+
+     textarea, input, label{
+         display: block;
+         width: 100%;
+         border: none;
+         padding: 1rem;         
+     }
+
+     textarea, input:not([type="submit"]){         
+         border-bottom: .1rem solid #22175b;
+         margin-bottom: 2rem;
+     }
+
+     form article{
+         position: relative;
+     }
+
+
+     [for="userSubject"]{
+         font-weight: 700;
+     }
+
+     label{
+         padding: 0;
+         transition: all .5s
+     }
+
+
+     label:not([for="userSubject"]){
+         font-weight: 700;
+         position: absolute;
+         padding: 0;
+         top: .5rem;
+     }     
+
+     label.openedLabel{
+         top: -1.5rem;
+         font-size: 1.2rem;
+         color: grey;
+     }
+
+
+
 /*
 footer
 */
