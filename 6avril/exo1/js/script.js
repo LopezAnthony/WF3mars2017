@@ -149,7 +149,6 @@ $(document).ready(function () {
 
     };
 
-
     // Burger index
         // Burger menu : ouverture
         $(' header>a').click(function(evt){
