@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Merriweather:400,700|Roboto');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/*
+Reset
+*/
+    *{
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    html{
+        font-size: 62.5%;
+    }
+    body{
+        font-size: 1.5rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        text-align: center;
+    }
+    img{
+        max-width: 100%;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    li{
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-right: 1rem;
+    }
+
+/*
+Header
+*/
+
+    header{        
+        background-image: url('../img/header-bg.jpg');
+        background-size: cover;
+        padding: 4rem;
+    }
+
+    nav{
+        margin-bottom: 5rem;
+    }
+
+    nav li:first-of-type a{
+        font-size: 2rem;
+        color: #fccd4b;
+        font-family: 'Pacifico', cursive;
+    }
+
+    h1{
+        color: white;
+        font-size: 4rem;
+        text-transform: uppercase;
+        margin-bottom: 5rem;
+    }
+
+    h1 span{
+        font-size: .5em;
+        font-family: 'Merriweather', serif;
+        text-transform: initial;
+        display: block;
+    }
+
+    h2{
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    h2 + p {
+        display: block;
+        font-family: 'Merriweather', serif;
+        font-size: 1rem;
+        color: #777775;
+    }
+
+    header > a{
+        background: #fccd4b;
+        padding: 1rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        -webkit-border-radius: 0.5rem;
+        border-radius: 0.5rem;
+    }
+
+/*
+Portfolio
+*/
+
+    section:first-of-type{
+        background: #eee;
+        padding: 4rem 0 2rem 0;
+    }
+
+    figure{
+        position: relative;
+        margin: 2rem;
+        background: white;
+    }
+
+    figure img{
+        height: 30rem;
+        width: 30rem;
+    }
+    figure > a{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(252, 205, 75, 0.8);
+        opacity: 0;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+    }
+
+    figure .fa{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-size: 5rem;
+    }
+
+    figure > a:hover{
+        opacity: 1;
+    }
+
+    figcaption{
+        padding: 1rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 700;
+    }
+
+    figcaption b{
+        display: block;
+        color: #777775
+    }
+
+/*
+Contacts
+*/
+
+    section:nth-child(2){
+        background-image: url('../img/map-image.png');
+        background-size: cover;
+        background-color: black;
+        padding: 2rem;
+    }
+
+    section:nth-child(2) h2{
+        color: white;
+    }
+
+    section:nth-child(2) p{
+        margin-bottom: 2rem;
+    }
+
+    input:not([type="submit"]), select, textarea{
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border: none;
+        -webkit-border-radius: 0.5rem;
+        border-radius: 0.5rem;
+    }
+
+    textarea{
+        height: 15rem;
+    }
+
+    ::placeholder{
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+    }
+
+
+
+    [type="submit"]{
+        background: #fccd4b;
+        padding: 1rem;
+        text-transform: uppercase;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        border: none;
+        -webkit-border-radius: 0.5rem;
+        border-radius: 0.5rem;
+    }
+
+    form + p{
+        color: red;
+    }
+
+    /* Modal pour la validation formulaire */
+        #modal{
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 5rem;
+            height: 100%;
+            width: 100%;
+        }
+
+        #modal article{
+            padding: 5rem;
+            background: white;
+            -webkit-border-radius: .8rem;
+            border-radius: .8rem;
+        }
+
+        h3 span{
+            font-size: 2.5rem;
+        }
+
+        .fa-times{
+            cursor: pointer;
+        }
+
+        .hidden{
+            display: none;
+        }
+
+/*
+Footer
+*/
+    footer article{
+        padding: 1rem;
+    }
+
+
+
+    footer li{
+        position: relative;
+        background: black;
+        width: 3rem;
+        height: 3rem;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+    }
+
+    footer li a{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    article > a{
+        color: #fccd4b;
+    }
+
+/*
+Responsive
+*/
+
+    @media screen and (min-width: 950px) {
+
+        nav{
+            text-align: right;
+            position: relative;
+            max-width: 95rem;
+            margin: 2rem auto 15rem auto;
+        }
+
+        h1 span{
+            margin-bottom: 1rem;
+        }
+
+        header > a{
+            display: inline-block;
+            margin: 2rem auto 15rem auto;
+        }
+
+        h2{
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        h2 + p{
+            font-size: 1.5rem;
+        }
+
+        nav li:nth-child(1){
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+        }
+
+        section > article{
+            max-width: 95rem;
+            margin: auto;
+        }
+
+        figure{
+            width: 32%;
+            margin: auto;
+            display: inline-block;
+        }
+
+        section:nth-child(2) article{
+            max-width: 95rem;
+            margin: 10rem auto 5rem auto;
+        }
+
+        section:nth-child(2) article article{
+            display: inline-block;
+            width: 48%;
+            margin:0 1rem 2rem auto;
+            vertical-align: top;
+        }
+
+        section:nth-child(2) p{
+            margin-bottom: 8rem;
+        }
+
+        input:not([type="submit"]), select{
+            padding: 2rem;
+        }
+        textarea{
+            height: 18.8rem;
+        }
+
+        footer{
+            max-width: 95rem;
+            margin: auto;
+        }
+
+        footer article{
+            width: 32%;
+            margin: auto;
+            display: inline-block;
+            padding: 2rem;
+        }
+
+    }
+
