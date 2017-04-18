@@ -7,7 +7,7 @@
     --Copie/colle le contenu de bibliotheque .sql dans la console.
 
 --***************************************
---Création de la BDD
+--Exercices
 --***************************************
         --1. Quel est l'id_abonne de Laura?
             SELECT id_abonne FROM abonne WHERE prenom = 'laura';
@@ -31,3 +31,24 @@
             SELECT id_livre, COUNT(id_livre) AS nombre FROM emprunt GROUP BY id_livre ORDER BY nombre DESC LIMIT 0,1 ;
 
         --8. Quel id_abonne emprunte le plus de livres?
+            SELECT id_abonne, COUNT(id_abonne) AS nombre FROM emprunt GROUP BY id_abonne ORDER BY nombre DESC LIMIT 0,1 ;
+
+--***************************************
+--Requêtes inbriquées
+--***************************************
+    --Syntaxe 'aide mémoire' de la requête imbriquée:
+        SELECT a FROM table_de_a WHERE b IN (SELECT b FROM table_de_b WHERE condition);
+
+    --Afin de réaliser une requête imbriquée il faut obligatoirement un champ en COMMUN entre les deux tables.
+
+    --Un champ NULL se teste avec IS NULL :
+        SELECT id_livre FROM emprunt WHERE date_rendu IS NULL; --Affiche les id_livres non rendus
+
+    --Afficher les titres de ces livres non rendu : 
+        SELECT titre FROM livre WHERE id_livre IN (SELECT id_livre FROM emprunt WHERE date_rendu IS NULL);
+
+    --Afficher le n° des livres que Chloé a emprunté;
+        SELECT id_livre FROM emprunt WHERE id_abonne = (SELECT id_abonne FROM abonne WHERE prenom = 'Chloe'); --quand il n'y a qu'un seul résultat dans la requête imbriquée, ont met un signe "=".
+
+    --Exercice : afficher le prénom des abonnés ayant emprunté un livre le 19-12-2011
+        SELECT prenom FROM abonne WHERE id_abonne IN (SELECT id_abonne FROM emprunt WHERE date_sortie = '2011-12-19');
