@@ -185,12 +185,13 @@
     --Union permet de fusionner le résultat de deux requêtes dans la même liste de résultat.
 
     --EXEMPLE 1:
-        --si on désinscrit Guillaume (suppression du profil de la table abonne), on puet afficher à la fois tous les livres empruntés, y compris ceux par des lecteurs désincrits (on affiche NULL à la place de Guillaume), et tous les abonnés, y compris ceux qui n'ont rien emprunté (on affiche NULL dans id_livre pour 'Anthony').
+        --si on désinscrit Guillaume (suppression du profil de la table abonne), on peut afficher à la fois tous les livres empruntés, y compris ceux par des lecteurs désincrits (on affiche NULL à la place de Guillaume), et tous les abonnés, y compris ceux qui n'ont rien emprunté (on affiche NULL dans id_livre pour 'Anthony').
 
         --Suppression du profil de Guillaume
         DELETE FROM abonne WHERE prenom = 'Guillaume';
 
         --Requête sur les livres empruntés avec UNION :
-        (SELECT abonne.prenom, emprunt.id_livre FROM abonne LEFT JOIN emprunt ON abonne.id_abonne = emprunt.id_abonne) UNION
+        (SELECT abonne.prenom, emprunt.id_livre FROM abonne LEFT JOIN emprunt ON abonne.id_abonne = emprunt.id_abonne) 
+        UNION
         (SELECT abonne.prenom, emprunt.id_livre FROM abonne RIGHT JOIN emprunt ON abonne.id_abonne = emprunt.id_abonne);
 
