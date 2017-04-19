@@ -13,4 +13,3 @@
         SET @ecole = 'WF3'; --déclare une variable ecoler et lui affecte la valeur 'WF3'.
         SELECT @ecole; --on peut accéder au contenu de cette variable par son nom.
 
-        
