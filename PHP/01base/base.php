@@ -214,6 +214,17 @@ echo '<h2> Structures conditionnelles et opérateurs de comparaison </h2>';
 
         //empty ser utilisé pour vérifier, par exemple, que les champs d'un formulaire sont remplis. isset permettra de vérifier l'existence d'un indice dans un array avant de l'utiliser.
 
+    //Entrer une valeur dans une variable sous condition (PHP7) :
+        $var1 = isset($maVar) ? $marVar : 'valeur par défaut'; //dans cette ternaire, on affecte la valeur de $maVar à var1 si elle existe. Celle-ci n'existant pas on lui affefcte 'valeur par défaut'.
+            echo $var1 . '<br>'; //affiche 'valeur par défaut'
+
+        //En version PHP7:
+            $var2 = $maVar ?? 'valeur par défaut'; //on fait exactement la même chose mais en plus court : le "??" signifie "soit l'un soit l'autre", "prend la première valeur qui existe".
+                echo $var2 . '<br>';
+
+            $var3 = $_GET['pays'] ?? $_GET['ville'] ?? 'pas d\'info'; //soit on prend le pays s'il existe, sinon on prend la ville si elle existe, sinon on  prend 'pas d'info' par défaut.
+                echo $var3 . '<br>';
+
 // ---------------------------------------
 echo '<h2> Condition switch </h2>';
 // ---------------------------------------
@@ -314,5 +325,4 @@ echo '<h2> Gestion des dates </h2>';
             //On construit un objet "date" avec le mort new, en indiquant la date qui nous intéresse entre parenthèses. $date est donc un objet "date".
 
             //Cet objet bénéficie de méthodes (=fonctions) offertes par la classe : il y a entre autres, la méthode format() qui permet de modifier le format d'une date. Pour appeler cette méthode sur l'objet $date, on utilise la flèche "->".
-
 ?>
