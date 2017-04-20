@@ -289,4 +289,30 @@ echo '<h2> Gestion des dates </h2>';
 
     echo date(' d/m/Y H:i:s ') . '<br>'; //affiche la date et heure de l'instant selon le format indiqué. (i = minutes). On peut choisir les séparateurs.
 
+    echo time() . '<br>'; //retourne le timestamp actuel = nombre de secondes écoulées depuis le 01/01/1970 à 00:00:00 (création théorique de UNIX).
+
+    //la fonction prédéfinie strtotime() :
+        $dateJour = strtotime('10-01-2016'); //retourne le timestamp de la date indiquée
+        echo $dateJour . '<br>';
+
+    //la fonction strftime() :
+        $dateFormat = strftime('%Y-%m-%d', $dateJour); //transforme le timestamp donnée en date selon le format indiqué, ici YYYY-MM-DD
+        echo $dateFormat . '<br>'; //affiche 2016-01-10.
+
+    //Exemple de conversion de format de date :
+        //transformer 23-05-2015 en 2015-05-23
+            echo strftime('%Y-%m-%d', strtotime('23-05-2015')) . '<br>';
+
+        //transformer 2015-05-23 en 23-05-2015:
+            echo strftime('%d-%m-%Y', strtotime('2015-05-23')) . '<br>';
+
+    //Cette méthode de transformation est limitée dans le temps (2038) ... on peut donc utiliser une autre méthode avec la classe DateTime :
+        $date = new DateTime('11-04-2017');
+        echo $date->format('Y-m-d');
+            //DateTime est une classe que l'ont peut comparer à un plan ou un modèle qui sert à construire des objets "date".
+
+            //On construit un objet "date" avec le mort new, en indiquant la date qui nous intéresse entre parenthèses. $date est donc un objet "date".
+
+            //Cet objet bénéficie de méthodes (=fonctions) offertes par la classe : il y a entre autres, la méthode format() qui permet de modifier le format d'une date. Pour appeler cette méthode sur l'objet $date, on utilise la flèche "->".
+
 ?>
