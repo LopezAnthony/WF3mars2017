@@ -214,6 +214,79 @@ echo '<h2> Structures conditionnelles et opérateurs de comparaison </h2>';
 
         //empty ser utilisé pour vérifier, par exemple, que les champs d'un formulaire sont remplis. isset permettra de vérifier l'existence d'un indice dans un array avant de l'utiliser.
 
-        
+// ---------------------------------------
+echo '<h2> Condition switch </h2>';
+// ---------------------------------------
+
+    //Dans le switch ci-dessous, les "case" représentent les cas différents dans lesquels on peut potentiellement tombé.
+    
+        $couleur = 'jaune';
+
+        switch($couleur) {
+            case 'bleu' : echo 'vous aimez le bleu'; break;
+            case 'rouge' : echo 'vous aimez le rouge'; break;
+            case 'vert' : echo 'vous aimez le vert'; break;
+            default : echo 'Vous n\'aimez ni le bleu, ni le rouge, ni le vert <br>';
+        }
+
+        //Le switch compare la valeur de la variable entre parenthèses à chaque case. Lorsqu'une valeur correspond, on exécute l'instruction en regard du case, puis le break qui indique qu'il faut sortir de la condition.
+
+        //Le default correspond à un else : on l'exécute par défaut quand aucun case ne correspond.
+
+        //Exercice : écrivez la condition switch ci-dessus avec des if...
+
+            if( $couleur == 'bleu' ){
+                echo 'vous aimez le bleu';
+            } else if ( $couleur == 'rouge' ){
+                echo 'vous aimez le rouge';
+            } else if ( $couleur == 'vert' ){
+                echo 'vous aimez le vert';
+            } else {
+                echo 'Vous n\'aimez ni le bleu, ni le rouge, ni le vert <br>';
+            }
+
+// ---------------------------------------
+echo '<h2> Fonctions Prédéfinies </h2>';
+// ---------------------------------------
+
+    //Une fonction préféfinie permet de réaliser un traitement spécifique qui est prévu dans le langage.
+
+        echo ' <h2>Traitement des chaînes de caractères (strpos, strlen, substr, ...) </h2>';
+
+            $email1 = 'prenom@site.fr';
+            echo strpos($email1, '@') . '<br>'; //strpos() indique la position 6 du caractères '@' dans la chaîne $email1.
+            echo strpos('Bonjour', '@');
+            var_dump(strpos('Bonjour', '@')); 
+                //Quand j'utilise une fonction prédéfinie, il faut se demander quels sont les arguments à lui fournir pour qu'elle s'exécute correctement, et ce qu'elle peut retourner comme résultat.
+
+                //Dans l'exemple de strpos() : en cas de succès => Integer, échec => booléen false.
+
+            $phrase = 'Mettez une phrase à cet endroit';
+            echo '<br>' . strlen($phrase) . '<br>'; //affiche la longueur du string : succès => integer, échec => false.
+
+            $texte = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ipsa ab quae quibusdam deleniti fuga voluptatem culpa blanditiis delectus sunt eaque placeat nisi, quasi, sint aut assumenda. Sunt, tempora dolorum?';
+            echo substr($texte, 0, 20) . '... <a href="#">Lire la suite</a><br>'; //On découpe une partie du texte et on lui concatène un lien. Succès => string, échec => false.
+
+            echo str_replace('site', 'gmail', $email1) . '<br>'; //remplace 'site' par 'gmail' dans le string contenu dans $email1.
+
+            $message = '          Hello World          ';
+            echo strtolower($message) . '<br>'; //passe le string en minuscule
+            echo strtoupper($message) . '<br>'; //passe le string en majuscule
+
+            echo strlen($message) . '<br>';
+            echo strlen(trim($message)) . '<br>'; //trim() permet de supprimer les espaces au début et à la fin d'un string
+
+// ---------------------------------------
+echo '<h2> Le manuel PHP en ligne </h2>';
+// ---------------------------------------
+
+    //Le manuel PHP en ligne :
+        // http://php.net/manual/fr/
+
+// ---------------------------------------
+echo '<h2> Gestion des dates </h2>';
+// ---------------------------------------
+
+    echo date(' d/m/Y H:i:s ') . '<br>'; //affiche la date et heure de l'instant selon le format indiqué. (i = minutes). On peut choisir les séparateurs.
 
 ?>
