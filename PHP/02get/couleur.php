@@ -1,3 +1,5 @@
+<h1>Couleur du fruit :</h1>
+
 <?php
 
     //Exercice:
@@ -15,9 +17,11 @@
                 echo 'Un ' . $_GET['fruit'] . ' est vert <br>';
             }else if ($_GET['fruit'] == 'cerise'){
                 echo 'Une ' . $_GET['fruit'] . ' est rouge <br>';
+            }else{
+                echo 'Ce fruit n\'existe pas <br>';
             }
         }else{
-            echo 'Aucun produit sélectionné <br>';
+            echo 'Aucun Fruit sélectionné <br>';
         }
 
 ?>
