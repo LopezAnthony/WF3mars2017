@@ -1,9 +1,3 @@
-<a href="?fruit=cerises">Cerise</a><br>
-<a href="?fruit=bananes">Bananes</a><br>
-<a href="?fruit=pommes">Pommes</a><br>
-<a href="?fruit=peches">Pêches</a><br>
-
-
 <?php
 
     //Exercice:
@@ -15,9 +9,12 @@
 
         if(isset($_GET['fruit'])){
             echo calcul($_GET['fruit'], 1000);
-        }else{
-            echo'Sélectionnez un fruit <br>';
         }
 
 
 ?>
+
+<a href="?fruit=cerises">Cerise</a><br>
+<a href="?fruit=bananes">Bananes</a><br>
+<a href="?fruit=pommes">Pommes</a><br>
+<a href="?fruit=peches">Pêches</a><br>
