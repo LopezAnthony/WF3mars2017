@@ -19,14 +19,14 @@
     <label for="select">Selectionner un fruit : </label><br>
     <select name="select" id="select">
         <option value="NULL">--Selectionner un fruit--</option>
-        <option value="cerises">Cerises</option>
-        <option value="bananes">Bananes</option>
-        <option value="pommes">Pommes</option>
-        <option value="peches">Pêches</option>
+        <option value="cerises" <?php if(isset($_POST['select']) && $_POST['select'] == 'cerises') echo'selected'; ?> >Cerises</option>
+        <option value="bananes" <?php if(isset($_POST['select']) && $_POST['select'] == 'bananes') echo'selected'; ?> >Bananes</option>
+        <option value="pommes" <?php if(isset($_POST['select']) && $_POST['select'] == 'pommes') echo'selected'; ?> >Pommes</option>
+        <option value="peches" <?php if(isset($_POST['select']) && $_POST['select'] == 'peches') echo'selected'; ?> >Pêches</option>
     </select> <br>
 
     <label for="poids">Saisir poids (en g)</label><br>
-    <input id="poids" type="number" name="poids"><br>
+    <input id="poids" type="number" name="poids" value="<?php echo $_POST['poids'] ?? ''; ?>"><br>
 
     <input type="submit">
 </form>
