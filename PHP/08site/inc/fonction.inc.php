@@ -56,4 +56,36 @@
 
     }
 
+//------- fonction du panier
+
+    function creationDuPanier(){
+        if(!isset($_SESSION['panier'])){
+            //si n'existe pas le panier dans SESSION, on le crée:
+                $_SESSION['panier'] = array(); //le panier est un array vide
+                $_SESSION['panier']['titre'] = array();
+                $_SESSION['panier']['id_produit'] = array();
+                $_SESSION['panier']['quantite'] = array();
+                $_SESSION['panier']['prix'] = array();
+        }
+    }
+
+    function ajouterProduitDansPanier($titre, $id_produit, $quandtite, $prix){ //ces arguments sont en provenance de panier.php
+
+        creactionDuPanier(); //pour créer la structure si elle n'existe pas
+
+        $position_produit = array_search($id_produit, $_SESSION['panier']['id_produit']); //array_search retourne un chiffre si l'id_produit est présent dans l'array $_SESSION['panier'], qui correspond a l'indice auquel se situe l'élément (rappel : dans un array le premier indice vaut 0). Sinon retourne FALSE
+
+        if($position_produit === false){
+            //Si le produit n'est pas dans le panier, on l'y ajoute :
+            $_SESSION['panier']['titre'][] = $titre; //les crochets vides pour ajouter l'élément à la fin de l'array
+            $_SESSION['panier']['id_produit'][] = $id_produit;
+            $_SESSION['panier']['quantite'][] = $quantite;
+            $_SESSION['panier']['prix'][] = $prix;
+        }else{
+            //si le produit existe, on ajoute la quantité nouvelle à la quantité déjà présente dans le panier
+            $_SESSION['panier']['quantite'][$position_produit] += $quantite;
+        }
+
+    }
+
 ?>
