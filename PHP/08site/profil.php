@@ -35,15 +35,22 @@ require_once('inc/init.inc.php');
 
         $var = $_SESSION['membre']['id_membre'];
 
-        $resultat = executeRequete("SELECT id_commande, date_enregistrement, etat FROM commande WHERE id_membre = $var");
+        $resultat = executeRequete("SELECT id_commande, date_enregistrement, etat FROM commande WHERE id_membre = '$var'"); //dans une requête SQL, on met les variables entre quotes. Pour mémoire, si on y met un array celui-ci perd ses quotes autour de l'indice. A savoir: on ne peut pas le faire avec un array multidimensionnel
 
-        while($suivi = $resultat->fetch(PDO::FETCH_ASSOC)){
 
-        $contenu .= '<ul>
-                        <li>'. $suivi['id_commande'] .'</li>
-                        <li>'. $suivi['date_enregistrement'] .'</li>
-                        <li>'. $suivi['etat'] .'</li>
-                    </ul>';
+        //s'il y a des commandes dans $resultat, on les affiche:'
+        if($resultat->rowCount() != 0){
+            //on affiche les commandes:
+            while($suivi = $resultat->fetch(PDO::FETCH_ASSOC)){
+                $contenu .= '<ul>
+                                <li>Votre commande n° '. $suivi['id_commande'] .'</li>
+                                <li>'. $suivi['date_enregistrement'] .'</li>
+                                <li>'. $suivi['etat'] .'</li>
+                            </ul>';
+            }
+        }else{
+            //Il n'y a pas de commande:
+            $contenu .= "aucune commande en cours";
         }
 
 
