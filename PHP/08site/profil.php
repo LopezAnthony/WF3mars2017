@@ -27,6 +27,28 @@ require_once('inc/init.inc.php');
         $contenu .= '<p>Votre ville : '.$_SESSION['membre']['ville'].'</p>';
     $contenu .= '</div>';
 
+    /*
+    Exercice:
+        1.Afficher le suivi des commandes du membre (s'il y en a) dans une liste <ul><li> : id_commande, date et état de la commande S'il n'y en a pas, vous affichez "aucune commande en cours".
+        2.
+    */
+
+        $var = $_SESSION['membre']['id_membre'];
+
+        $resultat = executeRequete("SELECT id_commande, date_enregistrement, etat FROM commande WHERE id_membre = $var");
+
+        while($suivi = $resultat->fetch(PDO::FETCH_ASSOC)){
+
+        $contenu .= '<ul>
+                        <li>'. $suivi['id_commande'] .'</li>
+                        <li>'. $suivi['date_enregistrement'] .'</li>
+                        <li>'. $suivi['etat'] .'</li>
+                    </ul>';
+        }
+
+
+
+
 //---------------------AFFICHAGE--------------------------
 require_once('inc/haut.inc.php');
 echo $contenu; 
