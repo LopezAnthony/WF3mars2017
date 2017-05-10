@@ -44,9 +44,9 @@ if(!empty($affichage)){
             <?php
                 while ($resultat = $query->fetch(PDO::FETCH_ASSOC)) {
                         echo '<tr>';
-                        echo '<td>'. $resultat['nom'] .'</td>';
-                        echo '<td> '. $resultat['telephone'] .'</td>';
-                        echo '<td><a href="?id_restaurant='.$resultat['id_restaurant'] .'">plus de détails</a></td>';
+                            echo '<td>'. $resultat['nom'] .'</td>';
+                            echo '<td> '. $resultat['telephone'] .'</td>';
+                            echo '<td><a href="?id_restaurant='.$resultat['id_restaurant'] .'">plus de détails</a></td>';
                         echo '</tr>';
                 }
             ?>
