@@ -1,0 +1,9 @@
+Site web:
+    overapi.com
+    devdocs.io
+    combiencoutemonapp.com
+
+Logiciel
+    - Velocity (velocity.silverlakesoftware.com) avec plugin search docsets (sur VSCode)
+    -ionic (dev app mobile : ionicframework.com)
+    -gitkraken  (alternative github desktop)
