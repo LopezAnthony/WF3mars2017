@@ -326,7 +326,7 @@ echo '<h2> Gestion des dates </h2>';
         echo $date->format('Y-m-d');
             //DateTime est une classe que l'ont peut comparer à un plan ou un modèle qui sert à construire des objets "date".
 
-            //On construit un objet "date" avec le mort new, en indiquant la date qui nous intéresse entre parenthèses. $date est donc un objet "date".
+            //On construit un objet "date" avec le mot new, en indiquant la date qui nous intéresse entre parenthèses. $date est donc un objet "date".
 
             //Cet objet bénéficie de méthodes (=fonctions) offertes par la classe : il y a entre autres, la méthode format() qui permet de modifier le format d'une date. Pour appeler cette méthode sur l'objet $date, on utilise la flèche "->".
 
