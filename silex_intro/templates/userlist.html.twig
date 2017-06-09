@@ -1,0 +1,9 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    {% for value in id %}
+        <p>Bonjour {{ value.firstname }} {{ value.lastname }}.</p>
+        <p>Ton Mail : {{ value.email }}</p>
+        <p>Ton address : {{ value.address }}</p>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <table>
+        <tr>
+            <th>Prenom :</th>
+            <th>Nom :</th>
+            <th>Email :</th>
+            <th>Address :</th>
+        </tr>
+        {% for value in users %}
+            <tr>
+                <td>{{ value.firstname }}</td>
+                <td>{{ value.lastname }}</td>
+                <td>{{ value.email }}</td>
+                <td>{{ value.address }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
