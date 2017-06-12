@@ -5,7 +5,13 @@ class IndexController extends ControllerAbstract
 {
     public function indexAction()
     {
-        return $this->render('index.html.twig');
+
+        $articles = $this->app['article.repository']->findAll();
+
+        return $this->render(
+            'index.html.twig',
+            ['articles' => $articles]
+        );
     }
     
     public function categoriesAction() 
@@ -15,6 +21,21 @@ class IndexController extends ControllerAbstract
         return $this->render(
             'categories.html.twig', 
             ['categories' => $categories]
+        );
+    }
+
+    public function categorieAction($id)
+    {
+        $category = $this->app['category.repository']->find($id);
+
+        $articles = $this->app['article.repository']->findByCategory($category);
+
+        return $this->render(
+            'category.html.twig',
+            [
+                'category' => $category,
+                'articles' => $articles,
+            ]
         );
     }
 }

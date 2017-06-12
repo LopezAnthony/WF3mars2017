@@ -2,9 +2,11 @@
 
 use Controller\IndexController;
 use Controller\Admin\CategoryController;
+use Controller\UserController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Controller\Admin\ArticleController;
+
 
 $app['index.controller'] = function () use ($app) {
     return new IndexController($app);
@@ -21,10 +23,33 @@ $app
 ;
 
 $app
-    ->get('/rubriques', 'index.controller:categoriesAction')
-    ->bind('categories')
+    ->get('/rubrique/{id} ', 'index.controller:categorieAction')
+    ->assert('id', '\d+')
+    ->bind('category')
 ;
 
+/* USER */
+$app['user.controller'] = function () use ($app) {
+    return new UserController($app);
+};
+
+$app
+    ->match(
+        'utilisateur/inscription',
+        'user.controller:registerAction'
+    )
+    ->bind('register')
+;
+
+$app
+    ->match(
+        'utilisateur/connexion',
+        'user.controller:loginAction'
+    )
+    ->bind('login')
+;
+
+/* ADMIN */
 $app['admin.category.controller'] = function () use ($app) {
     return new CategoryController($app);
 };
