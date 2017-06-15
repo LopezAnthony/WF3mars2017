@@ -1,0 +1,1 @@
+J'ai utilisé la BDD de l'exo 1, j'ai créer un nouvelle table pour l'inscription.
