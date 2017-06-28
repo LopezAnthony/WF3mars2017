@@ -2,9 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32587b26-5720-4685-97fd-c49130a0583a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FairePlayMobil/symfony" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PHP - Evaluation pratique finale.pdf" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/silex_blog/.idea/workspace.xml" afterPath="$PROJECT_DIR$/silex_blog/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/.idea/commandlinetools/Symfony_04_06_17_20_36_s.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/.idea/faire_play_mobil.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/.idea/php.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/app/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/app/AppCache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/app/AppKernel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/app/Resources/views/base.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/app/Resources/views/default/index.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/app/config/config.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/app/config/config_dev.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/app/config/config_prod.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/app/config/config_test.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/app/config/parameters.yml.dist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/app/config/routing.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/app/config/routing_dev.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/app/config/security.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/app/config/services.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/bin/console" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/bin/symfony_requirements" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/composer.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/composer.phar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/phpunit.xml.dist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/src/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/src/AppBundle/AppBundle.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/src/AppBundle/Controller/DefaultController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/tests/AppBundle/Controller/DefaultControllerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/var/SymfonyRequirements.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/var/cache/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/var/logs/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/var/sessions/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/web/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/web/app.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/web/app_dev.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/web/apple-touch-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/web/config.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/web/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faire_play_mobil/web/robots.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/WF3mars2017.iml" afterPath="$PROJECT_DIR$/.idea/WF3mars2017.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -148,6 +193,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Nouveau dossier/ProjetFin/faire_play_mobil" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -241,15 +287,15 @@
       <option name="presentableId" value="Default" />
       <updated>1497359789461</updated>
       <workItem from="1497359790626" duration="8639000" />
-      <workItem from="1497514192540" duration="63000" />
+      <workItem from="1497514192540" duration="1259000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8702000" />
+    <option name="totallyTimeSpent" value="9898000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
